@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ritesh_Portfolio</title>
     <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -20,16 +22,16 @@
             <a href="#project">
                 <li>Projects</li>
             </a>
-            <a href="">
+            <a href="#Services">
                 <li>Services</li>
             </a>
-            <a href="">
+            <a href="#Contact">
                 <li>Contact</li>
             </a>
 
         </ul>
     </nav>
-    <div class="hero" id="Home">
+    <div class="hero" id="Home" >
         <div class="heroleft">
             <div class="name">
                 <h2>I am</h2>
@@ -38,10 +40,11 @@
             </div>
         </div>
         <div class="heroright">
-            <img src="./img/Laughing-Samurai-Pros-and-Cons-of-Using-Animations-in-Your-Web-Design-scaled-removebg-preview (1).png" alt="">
+            <img src="./img/Laughing-Samurai-Pros-and-Cons-of-Using-Animations-in-Your-Web-Design-scaled-removebg-preview (1).png"
+                alt="">
         </div>
     </div>
-    <div class="about" id="about">
+    <div class="about" id="about" data-aos="fade-up">
         <h1>About Me
             <hr>
         </h1>
@@ -51,11 +54,11 @@
             shops, diving into books, and outdoor adventures. Let's collaborate and bring your ideas to life!</p>
     </div>
 
-    <div class="projects" id="project">
+    <div class="projects" id="project" data-aos="fade-left">
         <h1>Projects
             <hr>
         </h1>
-        <div class="card-cont">
+        <div class="card-cont" data-aos="fade-right">
             <div class="card">
                 <img src="./img/project_1.png" alt="">
                 <h2>Ideayaan Website</h2>
@@ -72,14 +75,98 @@
     </div>
 
 
-    <div class="service">
-        <h1>Services <hr></h1>
-    </div>
-    <div class="service-card">
-        <div class="card2">
-            
+    <div class="service" id="Services" data-aos="fade-down">
+        <h1>Services
+            <hr>
+        </h1>
+        <div class="service-card" >
+            <!-- cards -->
+
+            <section class="plans__container" >
+                <div class="plans">
+                    <div class="plansHero">
+                        <h1 class="plansHero__title">Simple, transparent pricing</h1>
+                        <p class="plansHero__subtitle">No contracts. No suprise fees.</p>
+                    </div>
+                    <div class="planItem__container">
+                        <!--free plan starts -->
+                        <div class="planItem planItem--free" data-aos="fade-left">
+
+                            <div class="price" style="text-align: center;">&#x20B9;1499/-</div>
+
+                            <ul class="featureList">
+                                <li>Single Page Website</li>
+                                <li>Landing Page</li>
+                                <li>Responsive</li>
+                                <li class="disabled">Contact Form</li>
+                                <li class="disabled">Back-end</li>
+                            </ul>
+
+                            <button class="button">Hire</button>
+                        </div>
+                        <!--free plan ends -->
+
+                        <!--pro plan starts -->
+                        <div class="planItem planItem--pro" data-aos="fade-right">
+                            <div class="price">₹4999/-</div>
+
+                            <ul class="featureList">
+                                <li>3-5 Page Website</li>
+                                <li>Landing, About, Contact Pages</li>
+                                <li>Responsive</li>
+                                <li>Contact Form</li>
+                                <li class="disabled">Future Support</li>
+                            </ul>
+                            <button class="button">Hire</button>
+
+                            <!-- <button class="button button--pink">Get Started</button> -->
+                        </div>
+                        <!--pro plan ends -->
+
+                        <!--entp plan starts -->
+                        <div class="planItem planItem--entp" data-aos="fade-left">
+
+                            <div class="price">₹7999/-</div>
+
+                            <ul class="featureList">
+                                <li>Multiple Page Website</li>
+                                <li>Landing Page + DataBase</li>
+                                <li>Responsive</li>
+                                <li>Contact Form</li>
+                                <li>Source Code</li>
+                            </ul>
+
+
+                            <button class="button button--white">Hire</button>
+                        </div>
+                        <!--entp plan ends -->
+
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
+    <div class="contact" id="Contact">
+        <h1>Contact Me
+            <hr>
+        </h1>
+        <div class="contactcard">
+            <a href="https://wa.me/qr/23TNDPRI23ENF1"><img src="./img/logo-whatsapp-png-46042.png" alt=""></a>
+            <a href="mailto:riteshborikar2133@gmail.com"><img src="./img/logo-gmail-9952.png" alt=""></a>
+            <a href="https://t.me/Ritesh_Borikar"><img src="./img/telegram-logo-944.png" alt=""></a>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset:300,
+        duration:1000
+      });
+    </script>
 </body>
 
 </html>
