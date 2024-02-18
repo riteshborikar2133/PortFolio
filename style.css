@@ -11,7 +11,7 @@
     --yellow: #FCA311;
     --blue: #14213D;
     --black: #000000;
-    
+
 }
 
 nav ul {
@@ -32,6 +32,8 @@ nav ul a {
     height: 70vh;
     display: flex;
     /* display: block; */
+    background: url("./img/abstract-digital-grid-black-background.jpg");
+    background-size: cover;
     flex-wrap: wrap;
     justify-content: center;
     box-sizing: border-box;
@@ -42,7 +44,9 @@ nav ul a {
     width: 50%;
     display: flex;
     align-items: center;
-    background: url("./img/white_back.png");
+    /* background: url("./img/abstract-digital-grid-black-background.jpg"); */
+    /* background-size: cover; */
+    color: var(--white);
     justify-content: center;
 
 }
@@ -51,14 +55,46 @@ nav ul a {
     line-height: 2rem;
     /* border: 1px solid red; */
 }
+.heroleft .name h2 {
+    word-spacing: 0.21rem;
+}
 
-.heroleft .name img{
+.heroleft .name img {
     display: none;
-}    
+}
 
-.heroleft h1 {
+.heroleft .name div {
+    /* position: relative; */
+    border-right: 2px solid var(--yellow);
+    padding-right: 0.1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    overflow: hidden;
+    animation: typing 2s infinite alternate,
+        cursor .4s step-end infinite alternate;
+    width: 100%;
+}
+
+.heroleft .name div h1 {
+    width: 100%;
     font-size: 3rem;
+    letter-spacing: 0.5rem;
+
+    /* border: 1px solid red; */
     /* text-transform: uppercase; */
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
 }
 
 .heroleft h2 {
@@ -69,7 +105,8 @@ nav ul a {
     box-sizing: border-box;
     /* border: 1px solid red; */
     width: 50%;
-    background-color: var(--blue);
+    /* background-color: var(--blue); */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +167,7 @@ nav ul a {
     margin: 0 auto;
 }
 
-.projects{
+.projects {
     /* border: 1px solid red; */
     box-sizing: border-box;
     background-color: var(--blue);
@@ -183,13 +220,14 @@ nav ul a {
     transition: all ease-in-out 0.51s;
 }
 
-.projects .card-cont .card:hover{
+.projects .card-cont .card:hover {
     padding: 0.52rem;
     background: black;
     box-shadow: 1px 1px 10px var(--yellow);
     border: 2px solid var(--yellow);
 }
-.projects .card-cont .card:hover h2{
+
+.projects .card-cont .card:hover h2 {
     color: var(--yellow);
 
 }
@@ -241,7 +279,7 @@ nav ul a {
 
 .plans__container {
     padding: 1rem 0 2rem;
-    
+
     background-color: var(--gery);
 }
 
@@ -299,7 +337,7 @@ nav ul a {
 
 .planItem--entp {
     --bgColor: var(--blue);
-    
+
 }
 
 .planItem--entp .card {
@@ -499,7 +537,7 @@ nav ul a {
 
 /* contact */
 
-.contact{
+.contact {
     /* box-sizing: border-box; */
     background: url("./img/contact.jpg");
     box-sizing: border-box;
@@ -510,6 +548,7 @@ nav ul a {
     justify-content: center;
     flex-direction: column;
 }
+
 .contact h1 {
     text-transform: uppercase;
     font-size: 2rem;
@@ -525,69 +564,82 @@ nav ul a {
 }
 
 
-.contact .contactcard{
+.contact .contactcard {
     display: flex;
     justify-content: center;
-} 
-.contact .contactcard img{
+}
+
+.contact .contactcard img {
     height: 3rem;
     margin: 1rem;
     position: relative;
     transition: all ease-in-out 0.51s;
 }
-.contact .contactcard img:hover{
+
+.contact .contactcard img:hover {
     /* box-shadow: 1px 1px 10px black; */
     top: -5px;
 }
 
 @media screen and (max-width:500px) {
-    *{
+    * {
         font-size: 16px;
     }
-    nav{
+
+    nav {
 
         /* font-size: 0.41rem; */
     }
-    nav ul{
+
+    nav ul {
         /* display: none; */
         flex-wrap: wrap;
     }
-    nav ul a{
+
+    nav ul a {
         /* margin: 0.41rem; */
     }
 
-    .heroleft{
+    .heroleft {
         width: 100%;
         height: 70vh;
         padding: 1rem 0rem;
     }
-    
-    .heroleft .name{
+
+    .heroleft .name {
         line-height: normal;
-        text-align: center;;
+        text-align: center;
     }
-    .heroleft .name img{
+
+    .heroleft .name div h1 {
+        font-size: 2rem;
+    }
+
+    .heroleft .name img {
         height: 12rem;
         display: block;
         margin: auto;
         position: relative;
-        animation: heroimg 1s ease-in-out  infinite alternate;
+        animation: heroimg 1s ease-in-out infinite alternate;
     }
+
     @keyframes heroimg {
-        0%{
+        0% {
             top: -0px;
         }
-        100%{
+
+        100% {
             top: -12px;
         }
     }
 
 
-    .heroright{
+    .heroright {
         width: 100%;
         display: none;
     }
-    .heroright img{
+
+    .heroright img {
         height: 10rem;
     }
 
