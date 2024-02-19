@@ -12,7 +12,10 @@
 
 <body>
     <nav>
-        <ul>
+        <div class="hame" id="myBtn">
+            X
+        </div>
+        <ul class="navlist" id="navlist" >
             <a href="#Home">
                 <li>Home</li>
             </a>
@@ -31,7 +34,7 @@
 
         </ul>
     </nav>
-    <div class="hero" id="Home" >
+    <div class="hero" id="Home">
         <div class="heroleft">
             <div class="name">
                 <h2>I am</h2>
@@ -39,7 +42,8 @@
                     <h1>Ritesh&nbsp;Borikar</h1>
                 </div>
                 <h2>Full Stack Web Developer</h2>
-                <img src="./img/Laughing-Samurai-Pros-and-Cons-of-Using-Animations-in-Your-Web-Design-scaled-removebg-preview (1).png" alt="">
+                <img src="./img/Laughing-Samurai-Pros-and-Cons-of-Using-Animations-in-Your-Web-Design-scaled-removebg-preview (1).png"
+                    alt="">
             </div>
         </div>
         <div class="heroright">
@@ -57,11 +61,11 @@
             shops, diving into books, and outdoor adventures. Let's collaborate and bring your ideas to life!</p>
     </div>
 
-    <div class="projects" id="project" data-aos="fade-left">
+    <div class="projects" id="project" data-aos="fade-down">
         <h1>Projects
             <hr>
         </h1>
-        <div class="card-cont" data-aos="fade-right">
+        <div class="card-cont" data-aos="fade-left">
             <div class="card">
                 <img src="./img/project_1.png" alt="">
                 <h2>Ideayaan Website</h2>
@@ -78,14 +82,14 @@
     </div>
 
 
-    <div class="service" id="Services" data-aos="fade-down">
+    <div class="service" id="Services" data-aos="fade-up">
         <h1>Services
             <hr>
         </h1>
-        <div class="service-card" >
+        <div class="service-card">
             <!-- cards -->
 
-            <section class="plans__container" >
+            <section class="plans__container">
                 <div class="plans">
                     <div class="plansHero">
                         <h1 class="plansHero__title">Simple, transparent pricing</h1>
@@ -105,7 +109,8 @@
                                 <li class="disabled">Back-end</li>
                             </ul>
 
-                            <button class="button"><a href="#Contact" style="text-decoration: none; color: black;">Contact</a></button>
+                            <button class="button"><a href="#Contact"
+                                    style="text-decoration: none; color: black;">Contact</a></button>
                         </div>
                         <!--free plan ends -->
 
@@ -120,7 +125,8 @@
                                 <li>Contact Form</li>
                                 <li class="disabled">Future Support</li>
                             </ul>
-                            <button class="button"><a href="#Contact" style="text-decoration: none; color: black;">Contact</a></button>
+                            <button class="button"><a href="#Contact"
+                                    style="text-decoration: none; color: black;">Contact</a></button>
 
                             <!-- <button class="button button--pink">Get Started</button> -->
                         </div>
@@ -140,7 +146,8 @@
                             </ul>
 
 
-                            <button class="button"><a href="#Contact" style="text-decoration: none; color: black;">Contact</a></button>
+                            <button class="button"><a href="#Contact"
+                                    style="text-decoration: none; color: black;">Contact</a></button>
                         </div>
                         <!--entp plan ends -->
 
@@ -165,10 +172,23 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({
-        offset:300,
-        duration:1000
-      });
+        AOS.init({
+            offset: 300,
+            duration: 1000
+        });
+    </script>
+    <script>
+        const element = document.getElementById("myBtn");
+        element.addEventListener("click", myFunction);
+
+        const navbar = document.getElementById("navlist");
+
+        function myFunction() {
+            // document.getElementById("demo").innerHTML = "Hello World";
+            console.log("aa")
+            navbar.classList.toggle('active')
+        }
+
     </script>
 </body>
 

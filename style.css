@@ -22,6 +22,11 @@ nav ul {
     background-color: #000000;
 }
 
+nav ul .hame {
+    color: wheat;
+    display: none;
+}
+
 nav ul a {
     margin: 0.71rem 2rem;
     text-decoration: none;
@@ -587,17 +592,33 @@ nav ul a {
     }
 
     nav {
-
+        background-color: var(--black);
         /* font-size: 0.41rem; */
+        display: flex;
+        text-align: right;
+        flex-direction: column;
+        color: wheat;
+        justify-content: right;
+        padding: 0.7rem 1rem;
+        cursor: pointer;
     }
+
 
     nav ul {
-        /* display: none; */
         flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        /* position: absolute; */
+        width: 100%;
     }
+    .active{
+        display: none;
 
-    nav ul a {
-        /* margin: 0.41rem; */
+
+    }
+    nav ul a{
+
     }
 
     .heroleft {
